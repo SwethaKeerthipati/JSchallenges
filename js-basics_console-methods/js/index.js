@@ -6,7 +6,7 @@ console.clear();
 
 // 1. Store the sentence 'Happy coding!' in a variable named 'coding'.
 
-const coding = "Happy coding!";
+let coding = "Happy coding!";
 
 // 2. Display the variable 'coding' as a message in the console.
 
