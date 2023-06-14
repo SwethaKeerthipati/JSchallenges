@@ -17,16 +17,16 @@ console.log(name, price, quantity);
 
 const personChris = [12, "Chris", "Owen"];
 
-const [firstNameOfChris, lastNameOfChris, ageOfChris] = personChris;
-console.log(firstNameOfChris, lastNameOfChris, ageOfChris);
+export const [ageOfChris, firstNameOfChris, lastNameOfChris] = personChris;
+console.log(firstNameOfChris);
 
 // EXERCISE 3
 // Use array destructuring to extract the variables "firstNameOfAlex" and "lastNameOfAlex".
 // Make sure not to have unused variables.
 
 const personAlex = ["Alex", 12, "Main"];
-const [firstNameOfAlex, , lastNameOfAlex] = personAlex;
-console.log(firstNameOfAlex, lastNameOfAlex);
+export const [firstNameOfAlex, , lastNameOfAlex] = personAlex;
+console.log(firstNameOfAlex);
 
 // EXERCISE 4
 // Use array destructuring to extract the last name from the array
@@ -34,7 +34,7 @@ console.log(firstNameOfAlex, lastNameOfAlex);
 
 const students = ["Christina", "Jon", "Alexandare"];
 
-const [, , lastName] = students;
+export const [, , lastName] = students;
 console.log("lastName of the student is :", lastName);
 
 // EXERCISE 5
@@ -43,8 +43,11 @@ console.log("lastName of the student is :", lastName);
 
 const nestedStudents = ["Chris", ["Ahmad", "Antigoni"], ["Toby", "Sam"]];
 
-const [student1, [student2, student3], [student4, student5]] = nestedStudents;
-console.log("All students in array are:", nestedStudents);
+export const [student1, [student2, student3], [student4, student5]] =
+  nestedStudents;
+//console.log("All students in array are:", nestedStudents);
+console.log(` Name of student1 is :${student1} name of :${student2}`);
+console.log(student4);
 
 // EXERCISE 6
 // Spread the values of the values array into the function call of the add function.
@@ -52,8 +55,8 @@ console.log("All students in array are:", nestedStudents);
 
 const values = [1, 6, 7, 9, 12, 5, 4];
 
-const result = add(1); // Spread values inside this function call
-export { result };
+export const result = add(1, 6, 7, 9, 12, 5, 4); // Spread values inside this function call
+//export { result };
 
 function add(...values) {
   return values.reduce(
